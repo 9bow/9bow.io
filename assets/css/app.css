@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,500,700&subset=latin-ext");
+@-ms-viewport {
+  width: device-width;
+  zoom: 0.7;
+  min-zoom: 0.5;
+  max-zoom: 2.5;
+  orientation: portrait;
+}
+@-o-viewport {
+  width: device-width;
+  zoom: 0.7;
+  min-zoom: 0.5;
+  max-zoom: 2.5;
+  orientation: portrait;
+}
+@viewport {
+  width: device-width;
+  zoom: 0.7;
+  min-zoom: 0.5;
+  max-zoom: 2.5;
+  orientation: portrait;
+}
+html {
+  position: relative;
+  overflow-x: hidden !important;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  color: #324e63;
+  margin: 0;
+  padding: 0;
+  background: no-repeat center/150% linear-gradient(-20deg, #787ff6 10%, #1ca7ec 40%, #7bd5f5 60%, #4adede 100%);
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100% auto;
+  height: auto;
+  min-height: 100vh;
+  padding: 50px 20px;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    padding-top: 150px;
+  }
+}
+
+.icon-pytorch {
+  display: inline-block;
+  height: 0.9rem;
+  line-height: 1rem;
+  border: 0;
+  filter: invert(0.17) brightness(0.3) sepia(0.3) hue-rotate(180deg) saturate(5);
+}
+
+.profile-card {
+  width: 100%;
+  min-height: 640px;
+  margin: auto;
+  box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+  background: #fff;
+  border-radius: 12px;
+  max-width: 680px;
+  position: relative;
+}
+.profile-card-img {
+  width: 240px;
+  height: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  background-image: url("/assets/img/jhpark.jpg");
+  background-position: top center;
+  background-size: 280px;
+  box-shadow: 5px 5px 30px 5px #7bd5f5, 0px 0px 0px 5px #787ff6;
+}
+@media screen and (max-width: 576px) {
+  .profile-card-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+.profile-card-content {
+  margin-top: -50px;
+  text-align: center;
+  padding: 0 20px 40px 20px;
+  transition: all 0.3s;
+}
+.profile-card-name {
+  color: #324e63;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+.profile-card-name h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #6944ff;
+  margin: 10px 0 10px 0;
+}
+.profile-card-name .nickname {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: #324e63;
+  margin-bottom: 15px;
+}
+.profile-card-name .nickname strong {
+  font-weight: 700;
+}
+.profile-card-txt {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: #324e63;
+  margin-bottom: 15px;
+}
+.profile-card-txt strong {
+  font-weight: 700;
+}
+.profile-card-loc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.profile-card-social {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-card-social-txt {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+.profile-card-social-items-row {
+  width: 100%;
+}
+.profile-card-social-item {
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  margin: 15px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #405de6;
+  box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+  position: relative;
+  font-size: 21px;
+  flex-shrink: 0;
+  flex-direction: row;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .profile-card-social-item {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile-card-social-item:hover {
+    transform: scale(1.2);
+  }
+}
+.profile-card-social-item.linkedin {
+  background: linear-gradient(45deg, #1769ff, #213fca);
+  box-shadow: 0px 4px 30px rgba(27, 86, 231, 0.7);
+}
+.profile-card-social-item.facebook {
+  background: linear-gradient(45deg, #3b5998, #0078d7);
+  box-shadow: 0px 4px 30px rgba(43, 98, 169, 0.5);
+}
+.profile-card-social-item.twitter {
+  background: linear-gradient(45deg, #1da1f2, #0e71c8);
+  box-shadow: 0px 4px 30px rgba(19, 127, 212, 0.7);
+}
+.profile-card-social-item.instagram {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  box-shadow: 0px 4px 30px rgba(120, 64, 190, 0.6);
+}
+.profile-card-social-item.github {
+  background: linear-gradient(45deg, #333333, #626b73);
+  box-shadow: 0px 4px 30px rgba(63, 65, 67, 0.6);
+}
+.profile-card-social-item.codepen {
+  background: linear-gradient(45deg, #324e63, #414447);
+  box-shadow: 0px 4px 30px rgba(55, 75, 90, 0.6);
+}
+.profile-card-social-item.email {
+  background: linear-gradient(45deg, #d5135a, #f05924);
+  box-shadow: 0px 4px 30px rgba(223, 45, 70, 0.6);
+}
